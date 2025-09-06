@@ -132,9 +132,9 @@ export default function LineChart5() {
   const viewsChange = selectedPeriod === '7d' ? -3 : selectedPeriod === '30d' ? 5 : selectedPeriod === '90d' ? -8 : 12;
 
   return (
-    <div className="flex">
-      <Card className="w-344">
-        <CardHeader className="border-0 min-h-auto pt-6 pb-4">
+    <div className="flex w-full ">
+      <Card className="flex-1">
+        <CardHeader className="border-0 min-h-auto pt-4 pb-4">
           <CardTitle className="text-lg font-semibold">E-commerce Sales</CardTitle>
           <CardToolbar>
             {/* Period Selector */}
@@ -155,7 +155,7 @@ export default function LineChart5() {
 
         <CardContent className="px-2 pb-6">
           {/* Stats Section */}
-          <div className="flex items-center flex-wrap gap-3.5 md:gap-10 px-5 mb-8 text-sm">
+          <div className="flex items-center gap-3.5 md:gap-10 px-5 mb-8 text-sm">
             <div className="flex items-center gap-3.5">
               <ChartLabel label="Sales" color={chartConfig.sales.color} />
               <div className="flex items-center gap-2">
@@ -181,7 +181,7 @@ export default function LineChart5() {
           {/* Chart */}
           <ChartContainer
             config={chartConfig}
-            className="h-[300px] w-full [&_.recharts-curve.recharts-tooltip-cursor]:stroke-initial"
+            className="h-[270px] w-full [&_.recharts-curve.recharts-tooltip-cursor]:stroke-initial"
           >
             <ComposedChart
               data={currentData}

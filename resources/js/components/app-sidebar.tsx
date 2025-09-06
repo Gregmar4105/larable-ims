@@ -5,14 +5,50 @@ import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, Sid
 import { dashboard } from '@/routes';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { BookOpen, Folder, LayoutGrid } from 'lucide-react';
+import { BookOpen, Folder, UserStar, ShieldUser, ShoppingCart, ListChecks} from 'lucide-react';
+import { BrickWallShield, ListTodo, ArrowLeftToLine, ArrowRightToLine} from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
         href: dashboard(),
-        icon: LayoutGrid,
+        icon: BrickWallShield,
+    },
+    {
+        title: 'Dashboard',
+        href: '/dashboard-admin',
+        icon: ShieldUser,
+    },
+    {
+        title: 'Dashboard',
+        href: '/dashboard-employee',
+        icon: UserStar,
+    },
+    {
+        title: 'Masterlist',
+        href: '/masterlist',
+        icon: ListTodo,
+    },
+    {
+        title: 'Available Stocks',
+        href: '/stocks',
+        icon: ListChecks,
+    },
+    {
+        title: 'IN',
+        href: '/in',
+        icon: ArrowLeftToLine,
+    },
+    {
+        title: 'OUT',
+        href: '/out',
+        icon: ArrowRightToLine,
+    },
+    {
+        title: 'Orders',
+        href: '/orders',
+        icon: ShoppingCart,
     },
 ];
 

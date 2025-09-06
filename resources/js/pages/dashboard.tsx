@@ -74,7 +74,7 @@ export default function Dashboard() {
             <div className="flex flex-col rounded-xl pb-6">
                 <StatisticCard1/>
                 </div>
-                <div className="flex flex-row pb-6 gap-6">
+                <div className="flex flex-col lg:flex-row pb-6 gap-6">
                 <LineChart5 />
                 <StatisticCard6/>
                 </div>
