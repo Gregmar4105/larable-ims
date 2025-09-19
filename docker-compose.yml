@@ -2,7 +2,7 @@ services:
   web:
     build:
       context:  .
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     image: ims-larable
     volumes:
       - .:/var/www/html
