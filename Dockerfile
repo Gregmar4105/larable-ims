@@ -2,10 +2,10 @@ FROM php:8.3-fpm
 
 WORKDIR /var/www/html
 
-RUN apt-get update && apt-get install-y \
+RUN apt-get update && apt-get install -y \
     libzip-dev \
     unzip \
-    && docker-php-ext-install zip pfo_mysql
+    && docker-php-ext-install zip pdo_mysql
 
 COPY . /var/www/html
 
